@@ -59,9 +59,9 @@
     let isMobileDevice = regexp.test(details);
 
     if (isMobileDevice) {
-      document.getElementsByName("forbidden").style.display = "none";
+      document.getElementsByClassName("forbidden")[0].style.display = "none";
     } else {
-      document.getElementsByName("forbidden").style.display = "block";
+      document.getElementsByClassName("forbidden")[0].style.display = "block";
     }
   </script>
 </body>
