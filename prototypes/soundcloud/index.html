@@ -5,15 +5,65 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soundcloud</title>
+  <title>Arrive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Niconne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div style="width: 300px; height: 100px;">
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;show_artwork=false&amp;show_user=false">
-    </iframe>
+  <div class="title white-text">
+    <h2>Arrive</h2>
+    <img class="spotlight-icon" src="assets/spotlight.svg" alt="spotlight">
+    <div class="hero">
+      <h3>
+        Lorem ipsum dolor sitamet lorem ipsum dolor.
+      </h3>
+    </div>
+    <h3 class="hero-instruction">Swipe up!</h3>
   </div>
+  <div class="soundcloud-player">
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;show_artwork=false&amp;show_user=false&amp;show_playcount=false">
+    </iframe>
+    <div class="schedule">
+      <p>
+        Dec 3, 2021 at 20.00
+      </p>
+      <p>
+        Spill The T Café
+      </p>
+    </div>
+    <div class="player-action">
+      <button>Add to cart</button>
+      <div class="price">
+        €7,00
+      </div>
+    </div>
+  </div>
+  <div class="forbidden">
+    You are not allowed to open the site in desktop
+  </div>
+  <script>
+    /* Storing user's device details in a variable*/
+    let details = navigator.userAgent;
+
+    /* Creating a regular expression 
+    containing some mobile devices keywords 
+    to search it in details string*/
+    let regexp = /android|iphone|kindle|ipad/i;
+
+    /* Using test() method to search regexp in details
+    it returns boolean value*/
+    let isMobileDevice = regexp.test(details);
+
+    if (isMobileDevice) {
+      document.getElementsByName("forbidden").style.display = "none";
+    } else {
+      document.getElementsByName("forbidden").style.display = "block";
+    }
+  </script>
 </body>
 
 </html>
